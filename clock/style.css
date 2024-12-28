@@ -1,0 +1,225 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e1ffbb;
+}
+
+.clock{
+    border:10px solid #001a6e;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.clock:after{
+    position: absolute;
+    content:"";
+    height: 200px;
+    width: 200px;
+    z-index:1;
+    background-image: url("./Firofcod.png");
+    background-position: center;
+    background-size:cover;
+}
+
+.center1,.center2{
+    position: absolute;
+    border-radius: 50%;
+}
+
+.center1{
+    height: 15px;
+    width: 15px;
+    background: #262626;
+    z-index:2;
+}
+
+.center2{
+    height: 9px;
+    width: 9px;
+    background: red;
+    z-index:7;
+}
+
+.lines div{
+    position: absolute;
+    width: 2px;
+    height: 5px;
+    background: #001a6e;
+}
+
+.lines div:nth-child(1){
+    transform: rotate(30deg) translateY(-113px);
+}
+
+.lines div:nth-child(2){
+    transform: rotate(60deg) translateY(-113px);
+}
+
+.lines div:nth-child(3){
+    transform: rotate(90deg) translateY(-113px);
+    background-color: red;
+}
+
+.lines div:nth-child(4){
+    transform: rotate(120deg) translateY(-113px);
+}
+
+.lines div:nth-child(5){
+    transform: rotate(150deg) translateY(-113px);
+}
+
+.lines div:nth-child(6){
+    transform: rotate(180deg) translateY(-113px);
+    background-color: red;
+}
+
+.lines div:nth-child(7){
+    transform: rotate(210deg) translateY(-113px);
+}
+
+.lines div:nth-child(8){
+    transform: rotate(240deg) translateY(-113px);
+}
+
+.lines div:nth-child(9){
+    transform: rotate(270deg) translateY(-113px);
+    background-color: red;
+}
+
+.lines div:nth-child(10){
+    transform: rotate(300deg) translateY(-113px);
+}
+
+.lines div:nth-child(11){
+    transform: rotate(330deg) translateY(-113px);
+}
+
+.lines div:nth-child(12){
+    transform: rotate(360deg) translateY(-113px);
+    background-color: red;
+}
+
+.secondHand{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    z-index:6;
+    animation: secondHand 60s linear infinite;
+}
+
+.secondHand:before{
+    position: absolute;
+    content:"";
+    height: 130px;
+    width: 3px;
+    left:-1px;
+    top:-25px;
+    background-color: red;
+    border-radius: 3px;
+}
+
+.secondHand:after{
+    position: absolute;
+    content: "";
+    height: 45px;
+    width: 7px;
+    left:-3px;
+    top:-55px;
+    background-color: red;
+    border-radius: 3px;
+}
+
+.minuteHand{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    z-index:5;
+    animation:minuteHand 3600s linear infinite;
+}
+
+.minuteHand:before{
+    position: absolute;
+    content:"";
+    border-left:3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom:70px solid black;
+    height: 1px;
+    width: 1px;
+    left:-3px;
+    top:-95px;
+    background-color: black;
+}
+
+.minuteHand:after{
+    position: absolute;
+    content:"";
+    border-left:2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom:25px solid black;
+    height: 1px;
+    width: 3px;
+    left:-3px;
+    top:-25px;
+    background-color: black;
+}
+
+.hourHand{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    z-index:4;
+    animation:hourHand 43200s linear infinite;
+}
+
+.hourHand:before{
+    position: absolute;
+    content:"";
+    border-left:3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom:55px solid black;
+    height: 1px;
+    width: 1px;
+    left:-3px;
+    top:-75px;
+    background-color: black;
+}
+
+.hourHand:after{
+    position: absolute;
+    content:"";
+    border-left:2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom:20px solid black;
+    height: 1px;
+    width: 3px;
+    left:-3px;
+    top:-20px;
+    background-color: black;
+}
+
+.digital{
+    position: absolute;
+    top:175px;
+    z-index:3;
+    border:2px solid white;
+    background-color: black;
+    color:white;
+    padding: 5px;
+    border-radius: 5px;
+    width: 85px;
+    text-align: center;
+    font-family: "Orbitron", serif;
+}
