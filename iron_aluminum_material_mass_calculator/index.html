@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demir Alüminyum Malzeme Kütlesi Hesaplama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="buttons">
+        <button onclick="filterProduct('sac')" class="button-value">Sac</button>
+        <button onclick="filterProduct('kosebent')" class="button-value">Köşebent</button>
+        <button onclick="filterProduct('kutuProfil')" class="button-value">Kutu Profil</button>
+        <button onclick="filterProduct('boru')" class="button-value">Boru</button>
+        <button onclick="filterProduct('mil')" class="button-value">Mil</button>
+    </div>
+
+    <div class="material hide" id="sac">
+        <img src="./images/Sac.jpg" width="250" height="250">
+        <form>
+            <label for="sacEn">En (W) (mm)</label>
+            <input type="number" id="sacEn">
+
+            <label for="sacBoy">Boy (L) (mm)</label>
+            <input type="number" id="sacBoy">
+
+            <label for="sacKalinlik">Kalınlık (t) (mm)</label>
+            <input type="number" id="sacKalinlik">
+
+            <label for="sacMalzeme">Malzeme (g/cm<sup>3</sup>)</label>
+            <select id="sacMalzeme">
+                <option value="demir">Demir</option>
+                <option value="alüminyum">Alüminyum</option>
+            </select>
+
+            <button class="button-calculator" onclick="sacKutle()">Hesapla</button>
+
+            <div id="sacResult"></div>
+        </form>
+    </div>
+
+    <div class="material hide" id="kosebent">
+        <img src="./images/Köşebent.jpg" width="250" height="250">
+        <form>
+            <label for="kosebentYukseklik">Yükseklik (L<sub>1</sub>) (mm)</label>
+            <input type="number" id="kosebentYukseklik">
+
+            <label for="kosebentGenislik">Genişlik (L<sub>2</sub>) (mm)</label>
+            <input type="number" id="kosebentGenislik">
+
+            <label for="kosebentKalinlik">Kalınlık (t) (mm)</label>
+            <input type="number" id="kosebentKalinlik">
+
+            <label for="kosebentUzunluk">Uzunluk (mm)</label>
+            <input type="number" id="kosebentUzunluk">
+
+            <label for="kosebentMalzeme">Malzeme (g/cm<sup>3</sup>)</label>
+            <select id="kosebentMalzeme">
+                <option value="demir">Demir</option>
+                <option value="alüminyum">Alüminyum</option>
+            </select>
+
+            <button class="button-calculator" onclick="kosebentKutle()">Hesapla</button>
+
+            <div id="kosebentResult"></div>
+        </form>
+    </div>
+
+    <div class="material hide" id="kutuProfil">
+        <img src="./images/Kutu Profil.jpg" width="250" height="250">
+        <form>
+            <label for="kutuProfilYukseklik">Yükseklik (h) (mm)</label>
+            <input type="number" id="kutuProfilYukseklik">
+
+            <label for="kutuProfilGenislik">Genişlik (W) (mm)</label>
+            <input type="number" id="kutuProfilGenislik">
+
+            <label for="kutuProfilKalinlik">Kalınlık (t) (mm)</label>
+            <input type="number" id="kutuProfilKalinlik">
+
+            <label for="kutuProfilUzunluk">Uzunluk (mm)</label>
+            <input type="number" id="kutuProfilUzunluk">
+
+            <label for="kutuProfilMalzeme">Malzeme (g/cm<sup>3</sup>)</label>
+            <select id="kutuProfilMalzeme">
+                <option value="demir">Demir</option>
+                <option value="alüminyum">Alüminyum</option>
+            </select>
+
+            <button class="button-calculator" onclick="kutuProfilKutle()">Hesapla</button>
+
+            <div id="kutuProfilResult"></div>
+        </form>
+    </div>
+
+    <div class="material hide" id="boru">
+        <img src="./images/Boru.jpg" width="250" height="250">
+        <form>
+            <label for="boruDisCap">Dış Çap (d) (mm)</label>
+            <input type="number" id="boruDisCap">
+
+            <label for="boruKalinlik">Kalınlık (t) (mm)</label>
+            <input type="number" id="boruKalinlik">
+
+            <label for="boruUzunluk">Uzunluk (mm)</label>
+            <input type="number" id="boruUzunluk">
+
+            <label for="boruMalzeme">Malzeme (g/cm<sup>3</sup>)</label>
+            <select id="boruMalzeme">
+                <option value="demir">Demir</option>
+                <option value="alüminyum">Alüminyum</option>
+            </select>
+
+            <button class="button-calculator" onclick="boruKutle()">Hesapla</button>
+
+            <div id="boruResult"></div>
+        </form>
+    </div>
+
+    <div class="material hide" id="mil">
+        <img src="./images/Mil.jpg" width="250" height="250">
+        <form>
+            <label for="milDisCap">Dış Çap (d) (mm)</label>
+            <input type="number" id="milDisCap">
+
+            <label for="milUzunluk">Uzunluk (mm)</label>
+            <input type="number" id="milUzunluk">
+
+            <label for="milMalzeme">Malzeme (g/cm<sup>3</sup>)</label>
+            <select id="milMalzeme">
+                <option value="demir">Demir</option>
+                <option value="alüminyum">Alüminyum</option>
+            </select>
+
+            <button class="button-calculator" onclick="milKutle()">Hesapla</button>
+
+            <div id="milResult"></div>
+        </form>
+    </div>
+
+    <div class="calculator"></div>
+    <script src="script.js"></script>
+</body>
+</html>
