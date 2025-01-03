@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <label for="mass">Kilonuz</label>
+        <input type="number" id="mass" placeholder="Kilonuzu kg cinsinden giriniz...">
+        <label for="height">Boyunuz</label>
+        <input type="number" id="height" placeholder="Boyunuzu m cinsinden giriniz...">
+        <button onclick="handleClick()">Hesapla</button>
+        <button type="reset" onclick="resetClick()">Temizle</button>
+    </form>
+    <div id="results"></div>
+    <script src="script.js"></script>
+</body>
+</html>
